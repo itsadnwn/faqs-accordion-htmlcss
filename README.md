@@ -14,7 +14,7 @@
     <tr>
       <td><img width="550" src="resources/images/web-version.png" /></td>
       <td><img width="550" src="resources/images/active-state.png" /></td>
-      <td><img width="250" src="resources/images/active-state.png" /></td>
+      <td><img width="250" src="resources/images/mobile-version.png" /></td>
     </tr>
   </tbody>
 </table>
