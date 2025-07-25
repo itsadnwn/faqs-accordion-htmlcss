@@ -1,0 +1,144 @@
+@font-face {
+    font-family: 'workSans';
+    src: url('/resources/fonts/WorkSans-VariableFont_wght.ttf') format('truetype');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'workSans', sans-serif; 
+    background-color: hsl(292, 16%, 49%);
+}
+
+main {
+    position: relative;
+}
+
+.container {
+    display: grid;
+    place-content: center;
+    height: 100vh;
+}
+
+.background-image {
+    position: absolute;
+}
+
+.background-image #bg-desktop {
+    display: block;
+    width: 100vw;
+}
+
+.background-image #bg-mobile {
+    display: none;
+}
+
+@media all and (max-width: 600px) {
+    .background-image #bg-desktop {
+        display: none;
+    }
+
+    .background-image #bg-mobile {
+        display: block;
+        width: 100vw;
+    }
+}
+
+.accordion-container {
+    position: relative;
+    background: #fff;
+    padding: 2rem 3rem;
+    border-radius: 1rem;
+    width: 50vw;
+    margin: 25% auto;
+    font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+    .accordion-container {
+        width: calc(100vw - 2rem);
+        margin: 25% 1rem;
+        padding: 1.5rem 1.5rem;
+        font-size: clamp(0.875rem, 2vw, 1rem);
+    }
+}
+
+.title {
+    display: flex;
+    align-content: center;
+}
+
+.title img {
+    width: 2rem;
+}
+
+.title h1 {
+    padding-left: 1rem;
+    font-size: 3rem;
+}
+
+.accordion {
+    margin: 1.5rem auto 0;
+    width: 100%;
+}
+
+.accordion li {
+    list-style: none;
+    width: 100%;
+    margin: 1rem;
+    padding: 0rem 2rem;
+}
+
+.accordion li:not(:last-child) {
+    padding-bottom: 1rem;
+    border-bottom: 1px solid hsl(275, 100%, 97%);
+}
+
+.accordion label:hover {
+    color: #A855F7;
+}
+
+.accordion label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1rem;
+    line-height: 1.3rem;
+    font-weight: 700;
+    cursor: pointer;
+    color: hsl(292, 42%, 14%);
+}
+
+.accordion label:not(:last-child) {
+    padding-bottom: 0.5rem;
+}
+
+label::after {
+    content: url('/resources/images/icon-plus.svg');
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+.accordion .content {
+    color: hsl(292, 16%, 49%);
+    line-height: 1.5rem;
+    font-size: 0.9rem;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-in-out;
+}
+
+.accordion input[type="radio"]:checked + label + .content {
+    max-height: 500px;
+}
+
+.accordion input[type="radio"]:checked + label::after {
+    content: url('/resources//images/icon-minus.svg')
+}
+
