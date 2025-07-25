@@ -45,28 +45,28 @@
 # 🗒️ Key Learning Points
 
 <div>
-  <h4>Responsive Background Images</h4>
+  <h3>⭐ Responsive Background Images</h3>
   <p><strong>Desktop vs Mobile:</strong> Implement different background images for desktop and mobile viewports using CSS media queries to ensure optimal display across devices.</p>
 </div>
 
 <div>
-  <h3>Positioning Techniques</h3>
+  <h3>⭐ Positioning Techniques</h3>
   <p><strong>Layering elements:</strong> Using <code>position: absolute</code> on the parent container and <code>position: relative</code> on the accordion box to position it above the background image.</p>
 </div>
 
 <div>
-  <h3>Dynamic Icon Management</h3>
+  <h3>⭐ Dynamic Icon Management</h3>
   <p><strong>Default state:</strong> Add image icons at the end of the accordion labels using CSS pseudo-elements (<code>:before</code> and <code>:after</code>).</p>
   <p><strong>Active state:</strong> Implement icon changes for opened accordion questions using CSS classes.
 </div>
 
 <div>
-  <h3>Content Overflow Management</h3>
+  <h3>⭐ Content Overflow Management</h3>
   <p><strong>Padding considerations:</strong> Remove padding from accordion content contains to ensure texts can be completely hidden when collapsed.</p>
 </div>
 
 <div>
-  <h3>CSS Functions for Precise Control</h3>
+  <h3>⭐ CSS Functions for Precise Control</h3>
   <p><strong><code>calc() function:</strong></code> Use when you need precise calculations mixing different units:</p>
   <ul>
     <li>Example: <code>calc(100vw - 2rem)</code> calculates full viewport width minus 2rem spacing</li>
